@@ -1,8 +1,8 @@
 ## Multi-agents using LangGraph
-- `langgraph_example_multiagents.py` — one **runnable Python script**, compatible with Windows PowerShell, VS Code, and macOS/Linux terminals.
+- `langgraph_example_multi_agents.py` — one **runnable Python script**, compatible with Windows PowerShell, VS Code, and macOS/Linux terminals.
 - `langgraph_example_mutliagents.ipynb` — one **self-contained Jupyter notebook**; every topic includes its code and a runnable example.
 - `requirements_langgraph_example.txt` — one dependency list for the offline examples, optional OpenAI examples, and Jupyter.
-- `run_langgraph_windows.cmd` — optional Windows double-click launcher (runs all offline examples).
+- `run_windows.cmd` — optional Windows double-click launcher (runs all offline examples).
 #. It does **not** require PyTorch or a GPU: LangGraph orchestrates nodes; it does not train an LLM. For offline LLM, a consumer-grade single GPU or consumer-grade two GPUs are sufficient.
 
 ## Requirements and installation (Windows 11, Anaconda or VS Code terminal)
@@ -21,10 +21,10 @@ If `py -3.12` is not installed, use `python -m venv .venv-langgraph` with a comp
 Run the Python executable (script):
 
 ```powershell
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagents.py --list
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagents --self-test
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagents --topic conditional_edges
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagents.py --export-mermaid .\diagrams --json-output .\results.json
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents.py --list
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --self-test
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --topic conditional_edges
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents.py --export-mermaid .\diagrams --json-output .\results.json
 ```
 
 If your virtual environment is activated, `python` alone is fine.
@@ -50,13 +50,13 @@ OPENAI_MODEL=gpt-5.4-mini
 Then in PowerShell:
 
 ```powershell
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagents.py --with-llm
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents.py --with-llm
 ```
 
 Or invoke just one:
 
 ```powershell
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutliagent --topic llm_node
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --topic llm_node
 ```
 
 In the Jupyter notebook, set `RUN_OPENAI_EXAMPLES=1` in the kernel's environment before executing the cells; do not place real API keys directly into notebook source code. `.env` is loaded only if you enable the examples.
@@ -97,7 +97,7 @@ In the Jupyter notebook, set `RUN_OPENAI_EXAMPLES=1` in the kernel's environment
 
 ## Notes and limitations
 
-- This is a **Python script**, not a standalone binary `.exe`. `run_langgraph_windows.cmd` provides a double-click launcher on Windows if dependencies are installed.
+- This is a **Python script**, not a standalone binary `.exe`. `run_windows.cmd` provides a double-click launcher on Windows if dependencies are installed.
 - Python packages must be installed in your environment before running; `.cmd` can find `python` from your PATH.
 - The optional OpenAI examples are not offline; an API key and internet access are required.
 - Mermaid `.mmd` files can be displayed in VS Code Mermaid extensions or Mermaid Live; image rendering is optional.
