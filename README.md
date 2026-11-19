@@ -1,6 +1,6 @@
 ## Multi-agents using LangGraph
 - `langgraph_example_multi_agents.py` — one **runnable Python script**, compatible with Windows PowerShell, VS Code, and macOS/Linux terminals.
-- `langgraph_example_mutliagents.ipynb` — one **self-contained Jupyter notebook**; every topic includes its code and a runnable example.
+- `langgraph_example_multi_agents.ipynb` — one **self-contained Jupyter notebook**; every topic includes its code and a runnable example.
 - `requirements_langgraph_example.txt` — one dependency list for the offline examples, optional OpenAI examples, and Jupyter.
 - `run_windows.cmd` — optional Windows double-click launcher (runs all offline examples).
 #. It does **not** require PyTorch or a GPU: LangGraph orchestrates nodes; it does not train an LLM. For offline LLM, a consumer-grade single GPU or consumer-grade two GPUs are sufficient.
@@ -22,16 +22,16 @@ Run the Python executable (script):
 
 ```powershell
 .\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents.py --list
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --self-test
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --topic conditional_edges
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents.py --export-mermaid .\diagrams --json-output .\results.json
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents --self-test
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents --topic conditional_edges
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents.py --export-mermaid .\diagrams --json-output .\results.json
 ```
 
 If your virtual environment is activated, `python` alone is fine.
 
 ## Jupyter Notebook in VS Code
 
-1. Open `langgraph_example_mutliagents.ipynb` in VS Code.
+1. Open `langgraph_example_multi_agents.ipynb` in VS Code.
 2. Select the `.venv-langgraph` Python interpreter as its kernel.
 3. Choose **Run All**. All examples run without a paid API or online model calls by default.
 4. The two OpenAI examples are defined but are skipped unless you explicitly opt in.
@@ -50,13 +50,13 @@ OPENAI_MODEL=gpt-5.4-mini
 Then in PowerShell:
 
 ```powershell
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents.py --with-llm
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents.py --with-llm
 ```
 
 Or invoke just one:
 
 ```powershell
-.\.venv-langgraph\Scripts\python.exe .\langgraph_example_mutli_agents --topic llm_node
+.\.venv-langgraph\Scripts\python.exe .\langgraph_example_multi_agents --topic llm_node
 ```
 
 In the Jupyter notebook, set `RUN_OPENAI_EXAMPLES=1` in the kernel's environment before executing the cells; do not place real API keys directly into notebook source code. `.env` is loaded only if you enable the examples.
