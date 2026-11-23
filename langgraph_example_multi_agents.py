@@ -104,7 +104,8 @@ def example_normal_edges(export_dir: Path | None = None) -> dict:
     builder.add_edge("Reverse_Node", "Uppercase_Node")
     builder.add_edge("Uppercase_Node", END)
     graph = compile_graph(builder, "04_normal_edges", export_dir)
-    return {"input": "LangGraph is Mutliagent ", "output": graph.invoke("LangGraph is easy")}
+    text = "LangGraph is easy"
+    return {"input": text, "output": graph.invoke(text)}
 
 
 # === 05. Conditional edges ====================================================
@@ -519,7 +520,8 @@ def self_test(results: dict) -> None:
 
     check("greeting", results["greeting"]["output"], "Hello Sudhanshu")
     check("factorial", results["factorial"]["factorial"], 24)
-    check("normal_edges", results["normal_edges"]["output"], "YSAE SI HPARGGNAL")
+    normal_edges = results["normal_edges"]
+    check("normal_edges", normal_edges["output"], normal_edges["input"][::-1].upper())
     check("conditional_edges/45", results["conditional_edges"]["45"], 110)
     check("conditional_edges/20", results["conditional_edges"]["20"], 25)
     check("typed_dict/even", results["typed_dict_state"]["even"]["output"], "10 is even")
