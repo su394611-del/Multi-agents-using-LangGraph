@@ -1,6 +1,6 @@
 ## Multi-agents using LangGraph
 - `langgraph_example_multi_agents.py` — one **runnable Python script**, compatible with Windows PowerShell, VS Code, and macOS/Linux terminals.
-- `langgraph_example_multi_agents.ipynb` — one **self-contained Jupyter notebook**; every topic includes its code and a runnable example.
+- `langgraph_exmaple_multi_agents.ipynb` — one **self-contained Jupyter notebook**; every topic includes its code and a runnable example.
 - `requirements_langgraph_example.txt` — one dependency list for the offline examples, optional OpenAI examples, and Jupyter.
 - `run_windows.cmd` — optional Windows double-click launcher (runs all offline examples).
 #. It does **not** require PyTorch or a GPU: LangGraph orchestrates nodes; it does not train an LLM. For offline LLM, a consumer-grade single GPU or consumer-grade two GPUs are sufficient.
@@ -31,7 +31,7 @@ If your virtual environment is activated, `python` alone is fine.
 
 ## Jupyter Notebook in VS Code
 
-1. Open `langgraph_example_multi_agents.ipynb` in VS Code.
+1. Open `langgraph_exmaple_multi_agents.ipynb` in VS Code.
 2. Select the `.venv-langgraph` Python interpreter as its kernel.
 3. Choose **Run All**. All examples run without a paid API or online model calls by default.
 4. The two OpenAI examples are defined but are skipped unless you explicitly opt in.
