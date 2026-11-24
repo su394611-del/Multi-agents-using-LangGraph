@@ -1,0 +1,5 @@
+[data-presentation="color-var-cyan"] { color:var(--cyan); }
+[data-presentation="color-82e7e1"] { color:#82e7e1; }
+[data-presentation="color-c3aaf9"] { color:#c3aaf9; }
+[data-presentation="margin-12px-0-0"] { margin:12px 0 0; }
+[data-presentation="color-98f5e9-text-decoration-underline"] { color:#98f5e9;text-decoration:underline; }
